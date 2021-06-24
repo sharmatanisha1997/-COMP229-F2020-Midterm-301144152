@@ -1,3 +1,9 @@
+/* File name: app.js
+ * Student's Name: Tanisha Sharma
+ * StudentID: 301144152
+ * Date: 2021/06/24
+ */
+
 // IIFE -- Immediately Invoked Function Expression
 (function(){
 

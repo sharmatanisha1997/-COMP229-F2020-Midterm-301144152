@@ -1,11 +1,99 @@
-<%- include ../partials/header.ejs %>
+<!-- 
+    File name: edit.ejs
+    Student's Name: Tanisha Sharma
+    StudentID: 301144152
+    Date: 2021/06/24
+-->
 
-<%- include ../partials/main_nav.ejs %>
+<%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
 
 <!-- Content for the Add page -->
 
 <!-- ADD YOU CODE TO CREATE THE EDIT PAGE -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 col-xs-12 my-5">
+      <h1><%= title %></h1><br>
+      <form
+        action="/book-list/edit/<%= Book !== null ? Book.id : '' %>"
+        method="post"
+        class="needs-validation"
+      >
+        <div class="form-row">
+          <div class="col-12 mb-3">
+            <label for="name">Book name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+              placeholder="Book name"
+              value="<%= Book !== null ? Book.name : '' %>"
+              required
+            />
+            <div class="invalid-tooltip">Please input the required field.</div>
+          </div>
+          <div class="col-12 mb-3">
+            <label for="author">Author</label>
+            <input
+              type="text"
+              class="form-control"
+              name="author"
+              id="author"
+              placeholder="Book author name"
+              value="<%= Book !== null ? Book.author : '' %>"
+              required
+            />
+            <div class="invalid-tooltip">Please input the required field.</div>
+          </div>
+          <div class="col-12 mb-3">
+            <label for="price">Book price</label>
+            <input
+              type="number"
+              class="form-control"
+              name="price"
+              id="price"
+              step="any"
+              placeholder="Book price"
+              value="<%= Book !== null ? Book.price : '' %>"
+              required
+            />
+            <div class="invalid-tooltip">Please input the required field.</div>
+          </div>
+          <div class="col-12 mb-3">
+            <label for="price">Book publish year</label>
+            <input
+              type="number"
+              class="form-control"
+              name="published"
+              id="published"
+              max="2021"
+              placeholder="Book publish year"
+              value="<%= Book !== null ? Book.published : '' %>"
+              required
+            />
+            <div class="invalid-tooltip">Please input the required field.</div>
+          </div>
+          <div class="col-12 mb-3">
+            <label for="description">Book description</label>
+            <textarea
+              class="form-control"
+              name="description"
+              id="description"
+              cols="20"
+              rows="5"
+              required
+            >
+                <%= Book !== null ? Book.description : '' %></textarea
+            >
+            <div class="invalid-tooltip">Please input the required field.</div>
+          </div>
+        </div>
+        <button class="btn btn-primary mx-auto" type="submit">Submit</button>
+      </form>
+      <br>
+    </div>
+  </div>
+</div>
 
-<%- include ../partials/bottom_nav.ejs %>  
-
-<%- include ../partials/footer.ejs %>
+<%- include ../partials/bottom_nav.ejs %> <%- include ../partials/footer.ejs %>

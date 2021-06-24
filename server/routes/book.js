@@ -1,13 +1,13 @@
+/* File name: book.js
+ * Student's Name: Tanisha Sharma
+ * StudentID: 301144152
+ * Date: 2021/06/24
+ */
+
 let express = require('express');
 let router = express.Router();
-let mongoose = require('mongoose');
-
-// connect to our Book Model
-let Book = require('../models/book');
 
 let bookController = require('../controllers/book');
-
-
 
 /* GET Route for the Book List page - READ Operation */
 router.get('/', bookController.displayBookList);
@@ -25,9 +25,11 @@ router.get('/edit/:id', bookController.displayEditPage);
 * add your code to 
 * POST Route for processing the Edit page - UPDATE Operation 
 */
+router.post('/edit/:id', bookController.processEditPage);
 
 /* add your code to 
 *  GET to perform  Deletion - DELETE Operation 
 */
+router.get('/delete/:id', bookController.processDelete);
 
 module.exports = router;

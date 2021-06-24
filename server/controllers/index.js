@@ -1,5 +1,8 @@
-let express = require('express');
-let router = express.Router();
+/* File name: index.js
+ * Student's Name: Tanisha Sharma
+ * StudentID: 301144152
+ * Date: 2021/06/24
+ */
 
 module.exports.displayHomePage = (req, res, next) => {
     res.render('index', {title: 'Home'});

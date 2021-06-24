@@ -1,4 +1,11 @@
+/* File name: app.js
+ * Student's Name: Tanisha Sharma
+ * StudentID: 301144152
+ * Date: 2021/06/24
+ */
+
 // installed 3rd party packages
+require("dotenv").config();
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
